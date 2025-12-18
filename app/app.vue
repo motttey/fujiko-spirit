@@ -195,8 +195,9 @@ export default defineComponent({
     ]
 
     const getImageUrl = (src: string) => {
-      const imageUrl = new URL(`./assets/img/${src}.webp`, import.meta.url).href
-      return imageUrl
+      const baseURL = useRuntimeConfig().app.baseURL || '/'
+      const base = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL
+      return `${base}/img/${src}.webp`
     }
 
     return {

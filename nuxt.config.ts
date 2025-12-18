@@ -5,11 +5,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   css: ['./app/assets/css/main.css'],
+
   vite: {
     plugins: [
       tailwindcss(),
     ],
   },
+
   app:{
     head: {
       link: [
@@ -39,5 +41,5 @@ export default defineNuxtConfig({
         { key: 'description', name: 'description', content: 'サークル「カンヅメカン」によるドラえもんや藤子不二雄作品に関する一次創作合同「フジコ・スピリット」の紹介ページ' }
       ],
     },
-  }
+  },
 })
