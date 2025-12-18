@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-center pb-3 pl-0 pr-0 transition sm:fixed sm:bottom-0 sm:left-0">
+  <div class="w-full flex justify-center pb-3 pl-0 pr-0 transition sm:bottom-0 sm:left-0">
     <div 
       class="flex flex-row justify-center items-center"
       id="abstract"
@@ -70,4 +70,139 @@
       </div>
     </div>
   </div>
+  <div class="scroll-smooth my-8">
+    <div id="distributions">
+      <div class="mx-5 md:mx-15 my-12 text-center lign-middle">
+        <h1 class="text-3xl items-center font-medium">バックナンバー</h1>
+        <div class="flex justify-center items-center align-middle">
+          <div 
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch align-middle"
+          >
+            <div class=
+              "max-w-sm my-6 mx-5 rounded overflow-hidden shadow-lg" 
+              v-for="(item, index) in FS_BACK_NUMBER"
+              v-bind:key="index"
+            > 
+              <a :href="item.url" target=”_blank”>
+                <img 
+                  class="publish-content-img w-full min-h-[84px] object-contain"
+                  :src="getImageUrl(item.src)" 
+                  :alt="item.name"
+                  loading="lazy"
+                />
+              </a>
+              <div class="mx-5 mt-5">
+                <div class="font-bold text-lg mb-2 text-left">
+                  {{item.name}}
+                </div>
+                <p class="text-gray-700 text-sm text-left font-semibold">
+                  {{item.description}}
+                </p>
+                <p 
+                  class="text-gray-700 text-sm text-left mt-2"
+                  v-if="item.subdescription"
+                >
+                  {{item.subdescription}}
+                </p>
+                <!---
+                <p class="text-gray-700 text-sm text-left">
+                  <a class="text-blue-600" :href="item.url" target=”_blank”>[詳細情報]</a>
+                </p>
+                -->
+                <p class="text-gray-700 text-sm text-left" v-if="item.onlineOrderUrl">
+                  <a class="text-blue-600" :href="item.onlineOrderUrl" target=”_blank”>[オンライン販売]</a>
+                  <span 
+                    class="inline-block bg-gray-600 rounded-full mx-2 px-2 py-0 text-sm font-semibold text-gray-100 mr-2 mb-2"
+                    v-if="item.soldout"
+                  >
+                    売り切れ
+                  </span>
+                </p>
+              </div>
+              <div class="px-6 pt-4 pb-2 text-left">
+                <span 
+                  class="inline-block bg-red-600 rounded-full px-3 py-1 text-sm font-semibold text-gray-100 mr-2 mb-2"
+                  v-if="item.new"
+                >
+                  新刊
+                </span>
+                <span 
+                  class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                  v-if="item.size || item.pages"
+                >
+                  {{item.size}} {{item.pages}}
+                </span>
+                <span 
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-bold text-gray-700 mr-2 mb-2"
+                    v-if="item.price"
+                  >
+                    {{item.price}}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+<script lang="ts">
+export default defineComponent({
+  async setup() {
+    const FS_BACK_NUMBER = [
+    {
+        "id": 1,
+        "name": "フジコ・スピリット第0号",
+        "description": "パイロット版",
+        "subdescription": "コミックマーケット101頒布",
+        "src": "fs0_hyoushi",
+        "url": "https://yjmtomoaki.booth.pm/items/4446490",
+        "new": false,
+        "soldout": true,
+        "size": "A5",
+        "pages": "48ページ",
+        "price": "580円",
+        "onlineOrderUrl": "https://yjmtomoaki.booth.pm/items/4446490"
+       },
+       {
+        "id": 2,
+        "name": "フジコ・スピリット第1号",
+        "description": "テーマ「すこし・ふしぎ」",
+        "subdescription": "コミックマーケット103頒布",
+        "src": "fs1_hyoushi",
+        "url": "https://www.pixiv.net/artworks/103332022",
+        "new": false,
+        "soldout": false,
+        "size": "A5",
+        "pages": "208ページ",
+        "price": "1,800円",
+        "onlineOrderUrl": "https://yjmtomoaki.booth.pm/items/4446490"
+       },
+       {
+        "id": 3,
+        "name": "フジコ・スピリット第2号",
+        "description": "テーマ「インターネット」",
+        "subdescription": "サンクリ2025Winter頒布",
+        "src": "fs2_hyoushi",
+        "url": "https://www.pixiv.net/artworks/66256659",
+        "new": false,
+        "soldout": false,
+        "size": "A5",
+        "pages": "210ページ",
+        "price": "1,800円",
+        "onlineOrderUrl": "https://yjmtomoaki.booth.pm/items/5330491"
+       },
+    ]
+
+    const getImageUrl = (src: string) => {
+      const imageUrl = new URL(`./assets/img/${src}.webp`, import.meta.url).href
+      return imageUrl
+    }
+
+    return {
+      FS_BACK_NUMBER,
+      getImageUrl
+    }
+  }
+})
+</script>
