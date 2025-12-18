@@ -1,18 +1,16 @@
 <template>
-  <div
-    class="fixed w-full flex justify-end bottom-0 pb-3 pr-5 transition"
-  >
+  <div class="w-full flex justify-center pb-3 pl-0 pr-0 transition sm:fixed sm:bottom-0 sm:left-0">
     <div 
       class="flex flex-row justify-center items-center"
       id="abstract"
     >
       <div class="grid grid-cols-1 sm:grid-cols-2">
-        <div class="h-72 sm:h-screen items-center text-center">
+        <div class="h-[300px] min-h-[300px] flex-shrink-0 sm:h-screen items-center text-center">
           <img 
-            class="cover-img w-full h-full sm:h-screen object-center object-cover"
+            class="cover-img w-full h-full object-center object-cover"
             loading="lazy"
-            src="https://pbs.twimg.com/media/G8GwjjrbQAAGUUo?format=jpg" 
-            alt="FS表紙画像"
+            src="~/assets/img/fs3_hyoushi_landing.webp" 
+            alt="FS3号 表紙画像"
           />
         </div>
         <div class="p-6 mx-8 my-6 items-center align-middle bg-contain bg-no-repeat max-w-none">
@@ -23,8 +21,16 @@
           </p>
           <blockquote class="text-md text-gray-900 dark:text-white my-10">
             <p class="text-justify text-sm font-semibold max-w-lg">
-              日本を代表するトップクリエイターの多くは、インタビュー等を通して「自分の創作活動の原体験は藤子不二雄作品にある」と語っています。<br>
-              「フジコ・スピリット 第0号」では、SNSで活動される藤子作品を愛してやまない11名の創作家による漫画・イラスト・小説をオムニバス形式で掲載させていただきました。
+              ドラえもん、オバQ、怪物くんなど<br/>
+              数多の名作漫画を生み出した<br/>
+              藤子不二雄先生。<br/>
+              そんな藤子先生の作品に<br/>
+              感化されたファンによる<br/>
+              オリジナル・一次創作合同誌です！<br/>
+              今回のテーマは「殻をやぶれ！」<br/>
+              なんと人数は驚異の38名！<br/>
+              総ページ数は289ページ！<br/>
+              楽しめ！<br/>
             </p>
             <p class="text-right text-md font-bold max-w-lg">
               ― 主催 ともあき・ザ・ビッグシティ (<a class="text-blue-600" href="https://twitter.com/yjmtomoaki" target="_blank">@yjmtomoaki</a>)
@@ -32,13 +38,13 @@
           </blockquote>
           <img 
             class="my-4 items-center text-center max-w-sm w-full object-full"
-            src="https://pbs.twimg.com/media/G8GwjjrbQAAGUUo?format=jpg" 
-            alt="FSのと表紙/裏表紙"
+            src="~/assets/img/fs3_hyoushi.webp" 
+            alt="FS3号の表紙/裏表紙"
           />
-          <h2 class="my-4 text-xl md:text-2xl font-medium">
+          <h2 class="mt-8 mb-4 text-xl md:text-2xl font-bold">
             詳細情報
           </h2>
-          <p class="my-4 text-l md:text-xl">第3号をC107で頒布します</p>
+          <p class="my-4 text-l md:text-xl">最新号(第3号)をC107で頒布します!</p>
           <ul class="space-y-1 max-w-md text-sm list-disc list-inside">
             <li>
               コミックマーケット107 (C107)
@@ -50,7 +56,7 @@
               頒布価格: <span class="font-semibold">2,000円</span>
             </li>
             <li>
-              内容: <span class="font-semibold">A5 288ページ</span>
+              内容: <span class="font-semibold">A5 289ページ</span>
             </li>
             <!--
             <li>
