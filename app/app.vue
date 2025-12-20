@@ -164,64 +164,55 @@
     </div>
   </div>
 </template>
-<script lang="ts">
-export default defineComponent({
-  async setup() {
-    const FS_BACK_NUMBER = [
-      {
-        id: 1,
-        name: "フジコ・スピリット第0号",
-        description: "パイロット版",
-        subdescription: "コミックマーケット101頒布",
-        src: "fs0_hyoushi",
-        url: "https://yjmtomoaki.booth.pm/items/4446490",
-        new: false,
-        soldout: true,
-        size: "A5",
-        pages: "48ページ",
-        price: "580円",
-        onlineOrderUrl: "https://yjmtomoaki.booth.pm/items/4446490",
-      },
-      {
-        id: 2,
-        name: "フジコ・スピリット第1号",
-        description: "テーマ「すこし・ふしぎ」",
-        subdescription: "コミックマーケット103頒布",
-        src: "fs1_hyoushi",
-        url: "https://www.pixiv.net/artworks/103332022",
-        new: false,
-        soldout: false,
-        size: "A5",
-        pages: "208ページ",
-        price: "1,800円",
-        onlineOrderUrl: "https://yjmtomoaki.booth.pm/items/4446490",
-      },
-      {
-        id: 3,
-        name: "フジコ・スピリット第2号",
-        description: "テーマ「インターネット」",
-        subdescription: "サンクリ2025Winter頒布",
-        src: "fs2_hyoushi",
-        url: "https://www.pixiv.net/artworks/66256659",
-        new: false,
-        soldout: false,
-        size: "A5",
-        pages: "210ページ",
-        price: "1,800円",
-        onlineOrderUrl: "https://yjmtomoaki.booth.pm/items/5330491",
-      },
-    ];
+<script setup lang="ts">
+  const FS_BACK_NUMBER = [
+    {
+      id: 1,
+      name: "フジコ・スピリット第0号",
+      description: "パイロット版",
+      subdescription: "コミックマーケット101頒布",
+      src: "fs0_hyoushi",
+      url: "https://yjmtomoaki.booth.pm/items/4446490",
+      new: false,
+      soldout: true,
+      size: "A5",
+      pages: "48ページ",
+      price: "580円",
+      onlineOrderUrl: "https://yjmtomoaki.booth.pm/items/4446490",
+    },
+    {
+      id: 2,
+      name: "フジコ・スピリット第1号",
+      description: "テーマ「すこし・ふしぎ」",
+      subdescription: "コミックマーケット103頒布",
+      src: "fs1_hyoushi",
+      url: "https://www.pixiv.net/artworks/103332022",
+      new: false,
+      soldout: false,
+      size: "A5",
+      pages: "208ページ",
+      price: "1,800円",
+      onlineOrderUrl: "https://yjmtomoaki.booth.pm/items/4446490",
+    },
+    {
+      id: 3,
+      name: "フジコ・スピリット第2号",
+      description: "テーマ「インターネット」",
+      subdescription: "サンクリ2025Winter頒布",
+      src: "fs2_hyoushi",
+      url: "https://www.pixiv.net/artworks/66256659",
+      new: false,
+      soldout: false,
+      size: "A5",
+      pages: "210ページ",
+      price: "1,800円",
+      onlineOrderUrl: "https://yjmtomoaki.booth.pm/items/5330491",
+    },
+  ];
 
-    const getImageUrl = (src: string) => {
-      const baseURL = useRuntimeConfig().app.baseURL || "/";
-      const base = baseURL.endsWith("/") ? baseURL.slice(0, -1) : baseURL;
-      return `${base}/img/${src}.webp`;
-    };
-
-    return {
-      FS_BACK_NUMBER,
-      getImageUrl,
-    };
-  },
-});
+  const getImageUrl = (src: string) => {
+    const baseURL = useRuntimeConfig().app.baseURL || "/";
+    const base = baseURL.endsWith("/") ? baseURL.slice(0, -1) : baseURL;
+    return `${base}/img/${src}.webp`;
+  };
 </script>
