@@ -1,5 +1,18 @@
 <template>
   <div
+      ref="scrollTopButton"
+      class="fixed w-full flex justify-end bottom-0 pb-3 pr-5 transition"
+  >
+    <div class="text-gray-800 p-2 hover:text-blue-400 bg-white/50 rounded transition">
+      <button 
+        id="scrollToTopButton"
+        v-on:click="scrollToTop"
+      >
+        Scroll to top
+      </button>
+    </div>
+  </div>
+  <div
     class="w-full flex justify-center pb-3 pl-0 pr-0 transition sm:bottom-0 sm:left-0"
   >
     <div id="abstract" class="flex flex-row justify-center items-center">
@@ -97,7 +110,7 @@
           <div class="flex-1 pr-4">
             <div class="flex items-center gap-2">
               <span
-                class="w-[50px] whitespace-nowrap inline-flex justify-center text-[10px] px-2 py-0.5 rounded bg-gray-200 text-gray-600 font-bold leading-none"
+                class="w-[50px] whitespace-nowrap inline-flex justify-center text-[10px] px-2 py-0.5 rounded bg-gray-200 text-gray-800 font-bold leading-none"
               >
                 {{ item.type }}
               </span>
@@ -217,6 +230,13 @@
 </template>
 <script setup lang="ts">
 import { FS_BACK_NUMBER, FS3_AUTHOR_LIST } from "./assets/data/metadata";
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
 
 const getImageUrl = (src: string) => {
   const baseURL = useRuntimeConfig().app.baseURL || "/";
