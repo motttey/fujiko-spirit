@@ -1,13 +1,12 @@
 <template>
   <div
-      ref="scrollTopButton"
-      class="fixed w-full flex justify-end bottom-0 pb-3 pr-5 transition"
+    ref="scrollTopButton"
+    class="fixed w-full flex justify-end bottom-0 pb-3 pr-5 transition"
   >
-    <div class="text-gray-800 p-2 hover:text-blue-400 bg-white/50 rounded transition">
-      <button 
-        id="scrollToTopButton"
-        v-on:click="scrollToTop"
-      >
+    <div
+      class="text-gray-800 p-2 hover:text-blue-400 bg-white/50 rounded transition"
+    >
+      <button id="scrollToTopButton" v-on:click="scrollToTop">
         Scroll to top
       </button>
     </div>
@@ -43,6 +42,10 @@
             >
           </p>
           <blockquote class="text-md text-gray-900 dark:text-white my-10">
+            <h3 class="mt-8 mb-4 text-l md:text-xl font-bold">
+              第3号 発刊にあたって
+            </h3>
+
             <p class="text-justify text-sm font-semibold max-w-lg">
               ドラえもん、オバQ、怪物くんなど<br />
               数多の名作漫画を生み出した<br />
@@ -69,15 +72,20 @@
             src="~/assets/img/fs3_hyoushi.webp"
             alt="FS3号の表紙/裏表紙"
           />
-          <h2 class="mt-8 mb-4 text-xl md:text-2xl font-bold">詳細情報</h2>
-          <p class="my-4 text-l md:text-xl">最新号(第3号)をC107で頒布します!</p>
+          <h3 class="mt-8 mb-4 text-l md:text-xl font-bold">詳細情報</h3>
+          <p class="my-4 text-md md:text-l">最新号(第3号)をC107で頒布します!</p>
           <ul class="space-y-1 max-w-md text-sm list-disc list-inside">
             <li>
               頒布場所:
               <span class="font-semibold"
-                >コミックマーケット107 (C107) 1日目(12/30) 東4イ03-a
-                パラレルソレイユ</span
-              >
+                >C107 1日目(12/30) 東4イ03-a
+                <a
+                  class="text-blue-600"
+                  href="https://webcatalog-free.circle.ms/Circle/11908281"
+                  target="_blank"
+                  >パラレルソレイユ</a
+                >
+              </span>
             </li>
             <li>頒布価格: <span class="font-semibold">2,000円</span></li>
             <li>内容: <span class="font-semibold">A5 289ページ</span></li>
@@ -234,9 +242,9 @@ import { FS_BACK_NUMBER, FS3_AUTHOR_LIST } from "./assets/data/metadata";
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
-  })
-}
+    behavior: "smooth",
+  });
+};
 
 const getImageUrl = (src: string) => {
   const baseURL = useRuntimeConfig().app.baseURL || "/";
