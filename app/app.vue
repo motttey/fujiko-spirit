@@ -59,11 +59,11 @@
           <h2 class="mt-8 mb-4 text-xl md:text-2xl font-bold">詳細情報</h2>
           <p class="my-4 text-l md:text-xl">最新号(第3号)をC107で頒布します!</p>
           <ul class="space-y-1 max-w-md text-sm list-disc list-inside">
-            <li>コミックマーケット107 (C107)</li>
             <li>
               頒布場所:
               <span class="font-semibold"
-                >1日目(12/30) 東4イ03-a パラレルソレイユ</span
+                >コミックマーケット107 (C107) 1日目(12/30) 東4イ03-a
+                パラレルソレイユ</span
               >
             </li>
             <li>頒布価格: <span class="font-semibold">2,000円</span></li>
@@ -80,10 +80,61 @@
       </div>
     </div>
   </div>
-  <div class="scroll-smooth my-8">
+  <div id="authors" class="scroll-smooth my-12">
+    <div class="max-w-7xl mx-auto px-5">
+      <h2 class="text-3xl font-bold text-center mb-10">執筆者・作品紹介</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 border-t border-gray-200">
+        <div
+          v-for="(item, index) in FS3_AUTHOR_LIST"
+          :key="index"
+          :class="[
+            'flex items-center justify-between p-4 border-b border-gray-200 transition-colors',
+            index % 2 === 0 ? 'bg-white' : 'bg-gray-800',
+            [0, 1].includes((index - 1) % 4) ? 'md:bg-white' : 'md:bg-gray-800',
+          ]"
+        >
+          <div class="flex-1 pr-4">
+            <div class="flex items-center gap-2">
+              <span
+                class="w-[50px] whitespace-nowrap inline-flex justify-center text-[10px] px-2 py-0.5 rounded bg-gray-200 text-gray-600 font-bold leading-none"
+              >
+                {{ item.type }}
+              </span>
+              <span
+                :class="[
+                  'text-sm md:text-md font-semibold mr-2',
+                  index % 2 === 0 ? 'text-gray-900' : 'text-gray-100',
+                  [0, 1].includes((index - 1) % 4)
+                    ? 'md:text-gray-900'
+                    : 'md:text-gray-100',
+                ]"
+                >{{ item.title }}</span
+              >
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 text-right">
+            <span
+              :class="[
+                'text-sm md:text-md font-semibold',
+                index % 2 === 0 ? 'text-gray-900' : 'text-gray-100',
+                [0, 1].includes((index - 1) % 4)
+                  ? 'md:text-gray-700'
+                  : 'md:text-gray-300',
+              ]"
+              >{{ item.author }}</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-smooth my-12">
     <div id="distributions">
       <div class="mx-5 md:mx-15 my-12 text-center lign-middle">
-        <h1 class="text-3xl items-center font-medium">バックナンバー</h1>
+        <h2 class="text-3xl font-bold text-center mb-10">バックナンバー</h2>
+
         <div class="flex justify-center items-center align-middle">
           <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch align-middle"
@@ -165,7 +216,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { FS_BACK_NUMBER } from "./assets/data/metadata";
+import { FS_BACK_NUMBER, FS3_AUTHOR_LIST } from "./assets/data/metadata";
 
 const getImageUrl = (src: string) => {
   const baseURL = useRuntimeConfig().app.baseURL || "/";
