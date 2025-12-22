@@ -101,7 +101,7 @@
       </div>
     </div>
   </div>
-  <div id="authors" class="scroll-smooth my-12">
+  <div id="authors" class="scroll-smooth my-16">
     <div class="max-w-7xl mx-auto px-5">
       <h2 class="text-3xl font-bold text-center mb-10">執筆者・作品紹介</h2>
 
@@ -151,7 +151,7 @@
       </div>
     </div>
   </div>
-  <div class="scroll-smooth my-12">
+  <div id="backNumber" class="scroll-smooth my-16">
     <div id="distributions">
       <div class="mx-5 md:mx-15 my-12 text-center lign-middle">
         <h2 class="text-3xl font-bold text-center mb-10">バックナンバー</h2>
