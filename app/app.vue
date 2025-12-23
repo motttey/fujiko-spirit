@@ -6,9 +6,7 @@
     <div
       class="text-gray-800 p-2 hover:text-blue-400 bg-white/50 rounded transition"
     >
-      <button id="scrollToTopButton" v-on:click="scrollToTop">
-        Scroll to top
-      </button>
+      <button id="scrollToTopButton" @click="scrollToTop">Scroll to top</button>
     </div>
   </div>
   <div
@@ -234,6 +232,11 @@
         </div>
       </div>
     </div>
+  </div>
+  <div id="footer" class="self-end space-y-4 mt-50 bg-gray-800 text-right">
+    <p class="text-1xl inline-block align-bottom text-white font-semibold">
+      © 2025 Tagosaku Mochiduki / ともあき・ザ・ビッグシティ
+    </p>
   </div>
 </template>
 <script setup lang="ts">
