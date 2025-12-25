@@ -1,4 +1,28 @@
 <template>
+  <nav
+    class="fixed left-0 top-0 h-150 w-6 z-20 bg-white/60 backdrop-blur flex flex-col items-center justify-center gap-32"
+  >
+    <div
+      v-for="section in navItems"
+      :key="section.id"
+      class="relative flex items-center justify-center w-full"
+    >
+      <button
+        class="w-4 h-4 flex text-right items-center justify-center border-2 border-black transition-all duration-300 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] z-20"
+        :class="activeSection === section.id ? 'bg-white' : 'bg-black'"
+        @click="scrollToSection(section.id)"
+      >
+        <div v-if="activeSection === section.id" class="w-2 h-2 bg-black"/>
+        <span
+          class="whitespace-nowrap -rotate-90 -translate-y-16 text-[10px] md:text-xs font-black tracking-widest transition-colors duration-300"
+          :class="activeSection === section.id ? 'text-black' : 'text-gray-400'"
+          style="width: 120px; text-align: center"
+        >
+          {{ section.label.toUpperCase() }}
+        </span>
+      </button>
+    </div>
+  </nav>
   <div
     ref="scrollTopButton"
     class="fixed w-full flex justify-end bottom-0 pb-3 pr-5 transition"
@@ -10,9 +34,11 @@
     </div>
   </div>
   <div
+    id="abstract"
+    data-section
     class="w-full flex justify-center pb-3 pl-0 pr-0 transition sm:bottom-0 sm:left-0"
   >
-    <div id="abstract" class="flex flex-row justify-center items-center">
+    <div class="flex flex-row justify-center items-center">
       <div class="grid grid-cols-1 sm:grid-cols-2">
         <div
           class="h-[300px] min-h-[300px] flex-shrink-0 sm:h-screen items-center text-center"
@@ -22,7 +48,7 @@
             loading="lazy"
             src="~/assets/img/fs3_hyoushi_landing.webp"
             alt="FS3号 表紙画像"
-          />
+          >
         </div>
         <div
           class="p-6 mx-8 my-6 items-center align-middle bg-contain bg-no-repeat max-w-none"
@@ -45,16 +71,16 @@
             </h3>
 
             <p class="text-justify text-sm font-semibold max-w-lg">
-              ドラえもん、オバQ、怪物くんなど<br />
-              数多の名作漫画を生み出した<br />
-              藤子不二雄先生。<br />
-              そんな藤子先生の作品に<br />
-              感化されたファンによる<br />
-              オリジナル・一次創作合同誌です！<br />
-              今回のテーマは「殻をやぶれ！」<br />
-              なんと人数は驚異の38名！<br />
-              総ページ数は289ページ！<br />
-              楽しめ！<br />
+              ドラえもん、オバQ、怪物くんなど<br >
+              数多の名作漫画を生み出した<br >
+              藤子不二雄先生。<br >
+              そんな藤子先生の作品に<br >
+              感化されたファンによる<br >
+              オリジナル・一次創作合同誌です！<br >
+              今回のテーマは「殻をやぶれ！」<br >
+              なんと人数は驚異の38名！<br >
+              総ページ数は289ページ！<br >
+              楽しめ！<br >
             </p>
             <p class="text-right text-md font-bold max-w-lg">
               ― 主催 ともあき・ザ・ビッグシティ (<a
@@ -69,7 +95,7 @@
             class="my-4 items-center text-center max-w-sm w-full object-full"
             src="~/assets/img/fs3_hyoushi.webp"
             alt="FS3号の表紙/裏表紙"
-          />
+          >
           <h3 class="mt-8 mb-4 text-l md:text-xl font-bold">詳細情報</h3>
           <p class="my-4 text-md md:text-l">最新号(第3号)をC107で頒布します!</p>
           <ul class="space-y-1 max-w-md text-sm list-disc list-inside">
@@ -99,7 +125,7 @@
       </div>
     </div>
   </div>
-  <div id="authors" class="scroll-smooth my-16">
+  <div id="authors" data-section class="scroll-smooth my-16">
     <div class="max-w-7xl mx-auto px-5">
       <h2 class="text-3xl font-bold text-center mb-10">執筆者・作品紹介</h2>
 
@@ -149,7 +175,7 @@
       </div>
     </div>
   </div>
-  <div id="backNumber" class="scroll-smooth my-16">
+  <div id="backNumber" data-section class="scroll-smooth my-16">
     <div id="distributions">
       <div class="mx-5 md:mx-15 my-12 text-center lign-middle">
         <h2 class="text-3xl font-bold text-center mb-10">バックナンバー</h2>
@@ -169,7 +195,7 @@
                   :src="getImageUrl(item.src)"
                   :alt="item.name"
                   loading="lazy"
-                />
+                >
               </a>
               <div class="mx-5 mt-5">
                 <div class="font-bold text-lg mb-2 text-left">
@@ -234,12 +260,13 @@
     </div>
   </div>
   <div id="footer" class="self-end space-y-4 mt-50 bg-gray-800 text-right">
-    <p class="text-1xl inline-block align-bottom text-white font-semibold">
+    <p class="mx-5 text-1xl inline-block align-bottom text-white font-semibold">
       © 2025 Tagosaku Mochiduki / ともあき・ザ・ビッグシティ
     </p>
   </div>
 </template>
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
 import { FS_BACK_NUMBER, FS3_AUTHOR_LIST } from "./assets/data/metadata";
 
 const scrollToTop = () => {
@@ -254,4 +281,52 @@ const getImageUrl = (src: string) => {
   const base = baseURL.endsWith("/") ? baseURL.slice(0, -1) : baseURL;
   return `${base}/img/${src}.webp`;
 };
+
+const navItems = [
+  { id: "abstract", label: "Top" },
+  { id: "authors", label: "Authors" },
+  { id: "backNumber", label: "Back Number" },
+] as const;
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
+
+// スクロール箇所のナビゲーションをactiveにする
+const activeSection = ref<string>(navItems[0].id);
+let observer: IntersectionObserver | null = null;
+
+onMounted(async () => {
+  await nextTick();
+
+  const options = {
+    root: null,
+    // 判定位置の調整：画面中央（上部から40%〜60%の位置）にセクションが来たらアクティブにする
+    rootMargin: "-40% 0px -40% 0px",
+    threshold: [0, 0.1, 0.5],
+  };
+
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        activeSection.value = entry.target.id;
+      }
+    });
+  }, options);
+
+  const sections = document.querySelectorAll("[data-section]");
+  sections.forEach((section) => {
+    observer?.observe(section);
+  });
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 </script>
