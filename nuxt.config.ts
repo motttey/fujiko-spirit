@@ -84,7 +84,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: "https://motttey.github.io/c101/",
+    url: "https://motttey.github.io/",
     name: '藤子不二雄オマージュマガジン フジコ・スピリット',
     description: 'サークル「カンヅメカン」によるドラえもんや藤子不二雄作品に関する一次創作合同「フジコ・スピリット」の紹介ページ',
     defaultLocale: 'ja'
