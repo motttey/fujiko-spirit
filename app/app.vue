@@ -71,7 +71,7 @@
                 第3号 発刊にあたって
               </h3>
 
-              <p class="text-justify text-sm font-semibold max-w-lg">
+              <p class="text-justify text-sm max-w-lg">
                 ドラえもん、オバQ、怪物くんなど<br >
                 数多の名作漫画を生み出した<br >
                 藤子不二雄先生。<br >
@@ -129,7 +129,7 @@
       </div>
     </div>
     <div id="authors" data-section class="scroll-smooth my-16">
-      <div class="max-w-7xl mx-auto px-5">
+      <div class="max-w-6xl mx-auto px-5">
         <h2 class="text-3xl font-bold text-center mb-10">執筆者・作品紹介</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 border-t border-gray-200">
