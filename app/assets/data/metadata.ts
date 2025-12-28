@@ -1,11 +1,11 @@
 export const FS_BACK_NUMBER = [
-    {
+  {
     id: 1,
     name: "フジコ・スピリット第2号",
     description: "テーマ「インターネット」",
     subdescription: "サンクリ2025Winter頒布",
     src: "fs2_hyoushi",
-    url: "https://www.pixiv.net/artworks/66256659",
+    url: "https://yjmtomoaki.booth.pm/items/5330491",
     new: false,
     soldout: false,
     size: "A5",
@@ -19,7 +19,7 @@ export const FS_BACK_NUMBER = [
     description: "テーマ「すこし・ふしぎ」",
     subdescription: "コミックマーケット103頒布",
     src: "fs1_hyoushi",
-    url: "https://www.pixiv.net/artworks/103332022",
+    url: "https://yjmtomoaki.booth.pm/items/4446490",
     new: false,
     soldout: false,
     size: "A5",

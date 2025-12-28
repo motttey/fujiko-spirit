@@ -28,7 +28,10 @@ export default defineNuxtConfig({
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "copyright", content: "Tomoaki the Big City / Tagosaku Mochiduki" },
+        {
+          name: "copyright",
+          content: "Tomoaki the Big City / Tagosaku Mochiduki",
+        },
         {
           key: "tw-card",
           name: "twitter:card",
@@ -86,9 +89,10 @@ export default defineNuxtConfig({
 
   site: {
     url: DEPLOYMENT_URL,
-    name: '藤子不二雄オマージュマガジン フジコ・スピリット',
-    description: 'サークル「カンヅメカン」によるドラえもんや藤子不二雄作品に関する一次創作合同「フジコ・スピリット」の紹介ページ',
-    defaultLocale: 'ja'
+    name: "藤子不二雄オマージュマガジン フジコ・スピリット",
+    description:
+      "サークル「カンヅメカン」によるドラえもんや藤子不二雄作品に関する一次創作合同「フジコ・スピリット」の紹介ページ",
+    defaultLocale: "ja",
   },
 
   modules: ["@nuxt/eslint", "nuxt-link-checker"],
