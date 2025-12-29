@@ -75,7 +75,7 @@ export default defineNuxtConfig({
           key: "keywords",
           property: "keywords",
           content:
-            "同人誌,合同誌,ドラえもん,藤子不二雄,コミケ,矢島ともあき,望月田吾作",
+            "同人誌,一次創作,ドラえもん,藤子不二雄,藤子・F・不二雄,藤子不二雄A,コミケ,矢島ともあき,望月田吾作,フジコ・スピリット,フジコスピリット",
         },
         {
           key: "description",
@@ -98,7 +98,7 @@ export default defineNuxtConfig({
   gtag: {
     id: "G-XL0B6P06EX",
     config: {
-      page_title: "フジコ・スピリット"
+      page_title: "藤子不二雄オマージュマガジン フジコ・スピリット"
     }
   },
 
