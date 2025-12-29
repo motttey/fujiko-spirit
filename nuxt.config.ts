@@ -95,5 +95,12 @@ export default defineNuxtConfig({
     defaultLocale: "ja",
   },
 
-  modules: ["@nuxt/eslint", "nuxt-link-checker"],
+  gtag: {
+    id: "G-XL0B6P06EX",
+    config: {
+      page_title: "フジコ・スピリット"
+    }
+  },
+
+  modules: ["@nuxt/eslint", "nuxt-link-checker", 'nuxt-gtag'],
 });
