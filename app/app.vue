@@ -49,7 +49,7 @@
               loading="lazy"
               src="~/assets/img/fs3_hyoushi_landing.webp"
               alt="FS3号 表紙画像"
-            />
+            >
           </div>
           <div
             class="p-6 mx-8 my-6 items-center align-middle bg-contain bg-no-repeat max-w-none"
@@ -72,16 +72,16 @@
               </h3>
 
               <p class="text-justify text-sm max-w-lg">
-                ドラえもん、オバQ、怪物くんなど<br />
-                数多の名作漫画を生み出した<br />
-                藤子不二雄先生。<br />
-                そんな藤子先生の作品に<br />
-                感化されたファンによる<br />
-                オリジナル・一次創作合同誌です！<br />
-                今回のテーマは「殻をやぶれ！」<br />
-                なんと人数は驚異の38名！<br />
-                総ページ数は289ページ！<br />
-                楽しめ！<br />
+                ドラえもん、オバQ、怪物くんなど<br >
+                数多の名作漫画を生み出した<br >
+                藤子不二雄先生。<br >
+                そんな藤子先生の作品に<br >
+                感化されたファンによる<br >
+                オリジナル・一次創作合同誌です！<br >
+                今回のテーマは「殻をやぶれ！」<br >
+                なんと人数は驚異の38名！<br >
+                総ページ数は289ページ！<br >
+                楽しめ！<br >
               </p>
               <p class="text-right text-md font-bold max-w-lg">
                 ― 主催 ともあき・ザ・ビッグシティ (<a
@@ -96,7 +96,7 @@
               class="my-4 items-center text-center max-w-sm w-full object-full"
               src="~/assets/img/fs3_hyoushi.webp"
               alt="FS3号の表紙/裏表紙"
-            />
+            >
             <h3 class="mt-8 mb-4 text-l md:text-xl font-bold">詳細情報</h3>
             <p class="my-4 text-md md:text-l">
               最新号(第3号)をC107で頒布します!
@@ -200,7 +200,7 @@
                     :src="getImageUrl(item.src)"
                     :alt="item.name"
                     loading="lazy"
-                  />
+                  >
                 </a>
                 <div class="mx-5 mt-5">
                   <div class="font-bold text-lg mb-2 text-left">

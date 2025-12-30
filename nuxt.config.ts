@@ -98,9 +98,9 @@ export default defineNuxtConfig({
   gtag: {
     id: "G-XL0B6P06EX",
     config: {
-      page_title: "藤子不二雄オマージュマガジン フジコ・スピリット"
-    }
+      page_title: "藤子不二雄オマージュマガジン フジコ・スピリット",
+    },
   },
 
-  modules: ["@nuxt/eslint", "nuxt-link-checker", 'nuxt-gtag'],
+  modules: ["@nuxt/eslint", "@nuxtjs/seo", "nuxt-link-checker", "nuxt-gtag"],
 });
