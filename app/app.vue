@@ -23,16 +23,6 @@
       </button>
     </div>
   </nav>
-  <div
-    ref="scrollTopButton"
-    class="fixed w-full flex justify-end bottom-0 pb-3 pr-5 transition"
-  >
-    <div
-      class="text-gray-800 p-2 hover:text-blue-400 bg-white/50 rounded transition"
-    >
-      <button id="scrollToTopButton" @click="scrollToTop">Scroll to top</button>
-    </div>
-  </div>
   <div id="container" class="bg-white">
     <div
       id="abstract"
@@ -277,13 +267,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
 import { FS_BACK_NUMBER, FS3_AUTHOR_LIST } from "./assets/data/metadata";
-
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
 
 const getImageUrl = (src: string) => {
   const baseURL = useRuntimeConfig().app.baseURL || "/";
