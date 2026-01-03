@@ -75,14 +75,12 @@
             </p>
             <blockquote class="text-md text-gray-900 dark:text-white my-4">
               <p class="text-justify text-sm max-w-lg">
-                <span class="font-bold"
-                  >藤子不二雄ファンによる完全一次創作合同誌</span
-                >第3弾！ <br />
-                ドラえもん、オバQ、怪物くんなどの作品に影響を受けた38名のクリエイターが集結！
+                ドラえもん、オバQ、怪物くんなど 数多の名作漫画を生み出した
+                藤子不二雄先生。そんな藤子先生の作品に感化されたファンによる、オリジナル・一次創作合同誌です。<br />
                 <br />
-                今回のテーマは<span class="font-bold">「殻を破れ！」</span>
+                第三弾のテーマは<span class="font-bold">「殻を破れ！」</span>
                 <br />
-                漫画、イラスト、小説、絵画など。一次創作であればなんでもあり！
+                漫画、イラスト、小説、絵画など。一次創作であればなんでもあり！なんと38名のクリエイターが集結！
                 <br />
                 ページは<span class="font-bold">驚異の289ページ！</span><br />
                 読み応え抜群な不思議な合同誌です！<br />
