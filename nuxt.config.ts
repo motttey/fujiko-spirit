@@ -102,5 +102,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/eslint", "@nuxtjs/seo", "nuxt-link-checker", "nuxt-gtag"],
+  modules: ["@nuxt/eslint", "@nuxtjs/seo", "nuxt-link-checker", "nuxt-gtag", "@nuxtjs/sitemap"],
 });
