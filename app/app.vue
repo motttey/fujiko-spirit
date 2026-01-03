@@ -39,7 +39,7 @@
               loading="lazy"
               src="~/assets/img/fs3_hyoushi_landing.webp"
               alt="FS3号 表紙画像"
-            >
+            />
           </div>
           <div
             class="p-6 mx-8 my-6 items-center align-middle bg-contain bg-no-repeat max-w-none"
@@ -62,16 +62,16 @@
               </h3>
 
               <p class="text-justify text-sm max-w-lg">
-                ドラえもん、オバQ、怪物くんなど<br >
-                数多の名作漫画を生み出した<br >
-                藤子不二雄先生。<br >
-                そんな藤子先生の作品に<br >
-                感化されたファンによる<br >
-                オリジナル・一次創作合同誌です！<br >
-                今回のテーマは「殻をやぶれ！」<br >
-                なんと人数は驚異の38名！<br >
-                総ページ数は289ページ！<br >
-                楽しめ！<br >
+                ドラえもん、オバQ、怪物くんなど<br />
+                数多の名作漫画を生み出した<br />
+                藤子不二雄先生。<br />
+                そんな藤子先生の作品に<br />
+                感化されたファンによる<br />
+                オリジナル・一次創作合同誌です！<br />
+                今回のテーマは「殻をやぶれ！」<br />
+                なんと人数は驚異の38名！<br />
+                総ページ数は289ページ！<br />
+                楽しめ！<br />
               </p>
               <p class="text-right text-md font-bold max-w-lg">
                 ― 主催 ともあき・ザ・ビッグシティ (<a
@@ -86,7 +86,7 @@
               class="my-4 items-center text-center max-w-sm w-full object-full"
               src="~/assets/img/fs3_hyoushi.webp"
               alt="FS3号の表紙/裏表紙"
-            >
+            />
             <h3 class="mt-8 mb-4 text-l md:text-xl font-bold">詳細情報</h3>
             <p class="my-4 text-md md:text-l">
               最新号(第3号)をC107で頒布します!
@@ -182,15 +182,22 @@
               <div
                 v-for="(item, index) in FS_BACK_NUMBER"
                 :key="index"
-                class="max-w-sm my-6 mx-5 rounded overflow-hidden shadow-lg"
+                class="relative max-w-sm my-6 mx-5 rounded overflow-hidden shadow-lg"
+                :class="item.soldout ? 'bg-gray-200' : 'bg-white'"
               >
+                <div
+                  v-if="item.soldout"
+                  class="absolute top-0 left-0 w-full bg-red-600 text-white text-center py-1 text-sm font-bold z-10 shadow-sm"
+                >
+                  SOLD OUT
+                </div>
                 <a :href="item.url" target="”_blank”">
                   <img
                     class="publish-content-img w-full min-h-[84px] object-contain"
                     :src="getImageUrl(item.src)"
                     :alt="item.name"
                     loading="lazy"
-                  >
+                  />
                 </a>
                 <div class="mx-5 mt-5">
                   <div class="font-bold text-lg mb-2 text-left">
@@ -220,12 +227,6 @@
                       target="”_blank”"
                       >[オンライン販売]</a
                     >
-                    <span
-                      v-if="item.soldout"
-                      class="inline-block bg-gray-600 rounded-full mx-2 px-2 py-0 text-sm font-semibold text-gray-100 mr-2 mb-2"
-                    >
-                      売り切れ
-                    </span>
                   </p>
                 </div>
                 <div class="px-6 pt-4 pb-2 text-left">
