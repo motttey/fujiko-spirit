@@ -75,8 +75,7 @@
             </p>
             <blockquote class="text-md text-gray-900 dark:text-white my-4">
               <p class="text-justify text-sm max-w-lg">
-                ドラえもん、オバQ、怪物くんなど 数多の名作漫画を生み出した
-                藤子不二雄先生。そんな藤子先生の作品に感化されたファンによる、オリジナル・一次創作合同誌です。<br />
+                ドラえもん、オバQ、怪物くんなど数多の名作漫画を生み出した藤子不二雄先生。そんな藤子先生の作品に感化されたファンによる、オリジナル・一次創作合同誌です。<br />
                 <br />
                 第三弾のテーマは<span class="font-bold">「殻を破れ！」</span>
                 <br />
@@ -359,5 +358,20 @@ useHead({
       "bg-gray-800": true,
     },
   },
+});
+
+// 検索結果のog image設定
+const site = useSiteConfig();
+const ogPath = "/img/fs3_hyoushi_landing.webp";
+const ogUrl = new URL(ogPath, site.url).toString();
+
+useSeoMeta({
+  title: "藤子不二雄オマージュマガジン フジコ・スピリット",
+  description:
+    "ドラえもんや藤子不二雄作品に感化されたクリエイターによる一次創作合同「フジコ・スピリット」の紹介ページ",
+  ogImage: ogUrl,
+  twitterCard: "summary_large_image",
+  twitterImage: ogUrl,
+  robots: "index,follow,max-image-preview:large",
 });
 </script>
