@@ -96,6 +96,15 @@
                 >)
               </p>
             </blockquote>
+            <div
+              class="img-container flex flex-row justify-center items-center"
+            >
+              <img
+                class="my-4 max-w-md w-full object-full"
+                src="~/assets/img/fs3_hyoushi.webp"
+                alt="FS3号の表紙/裏表紙"
+              />
+            </div>
             <h3 class="mt-8 mb-4 text-l md:text-xl font-bold">詳細情報</h3>
             <p class="my-4 text-md font-semibold md:text-l">
               第3号をC107で頒布しました.
