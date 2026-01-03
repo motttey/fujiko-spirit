@@ -25,6 +25,23 @@
   </nav>
   <div id="container" class="bg-white">
     <div
+      class="bg-white border-t-5 border-b-2 border-yellow-200 text-gray-700 px-4 py-3 px-10 mb-2"
+      role="alert"
+    >
+      <p class="font-bold">カンヅメカンからのお知らせ</p>
+      <p class="text-sm">
+        <span class="font-bold"
+          >フジコ・スピリットの第3号(最新号)を通信販売開始</span
+        >しました!
+        <a
+          class="text-blue-600 font-semibold"
+          target="_blank"
+          href="https://yjmtomoaki.booth.pm/items/7826525"
+          >[ともあき・ザ・ビッグシティのBOOTH]</a
+        >より購入いただけます. <br />
+      </p>
+    </div>
+    <div
       id="abstract"
       data-section
       class="w-full flex justify-center pb-3 pl-0 pr-0 transition sm:bottom-0 sm:left-0"
@@ -42,7 +59,7 @@
             />
           </div>
           <div
-            class="p-6 mx-8 my-6 items-center align-middle bg-contain bg-no-repeat max-w-none"
+            class="p-6 mx-8 my-4 items-center align-middle bg-contain bg-no-repeat max-w-none"
           >
             <h2 class="text-lg md:text-2xl font-bold">
               藤子不二雄オマージュマガジン
@@ -56,24 +73,21 @@
                 >カンヅメカン</a
               >
             </p>
-            <blockquote class="text-md text-gray-900 dark:text-white my-10">
-              <h3 class="mt-8 mb-4 text-l md:text-xl font-bold">
-                第3号 発刊にあたって
-              </h3>
-
+            <blockquote class="text-md text-gray-900 dark:text-white my-4">
               <p class="text-justify text-sm max-w-lg">
-                ドラえもん、オバQ、怪物くんなど<br />
-                数多の名作漫画を生み出した<br />
-                藤子不二雄先生。<br />
-                そんな藤子先生の作品に<br />
-                感化されたファンによる<br />
-                オリジナル・一次創作合同誌です！<br />
-                今回のテーマは「殻をやぶれ！」<br />
-                なんと人数は驚異の38名！<br />
-                総ページ数は289ページ！<br />
-                楽しめ！<br />
+                <span class="font-bold"
+                  >藤子不二雄ファンによる完全一次創作合同誌</span
+                >第3弾！ <br />
+                ドラえもん、オバQ、怪物くんなどの作品に影響を受けた38名のクリエイターが集結！
+                <br />
+                今回のテーマは<span class="font-bold">「殻を破れ！」</span>
+                <br />
+                漫画、イラスト、小説、絵画など。一次創作であればなんでもあり！
+                <br />
+                ページは<span class="font-bold">驚異の289ページ！</span><br />
+                読み応え抜群な不思議な合同誌です！<br />
               </p>
-              <p class="text-right text-md font-bold max-w-lg">
+              <p class="text-right mt-4 text-md font-bold max-w-lg">
                 ― 主催 ともあき・ザ・ビッグシティ (<a
                   class="text-blue-600"
                   href="https://twitter.com/yjmtomoaki"
@@ -82,14 +96,21 @@
                 >)
               </p>
             </blockquote>
-            <img
-              class="my-4 items-center text-center max-w-sm w-full object-full"
-              src="~/assets/img/fs3_hyoushi.webp"
-              alt="FS3号の表紙/裏表紙"
-            />
             <h3 class="mt-8 mb-4 text-l md:text-xl font-bold">詳細情報</h3>
-            <p class="my-4 text-md md:text-l">
-              最新号(第3号)をC107で頒布します!
+            <p class="my-4 text-md font-semibold md:text-l">
+              第3号をC107で頒布しました.
+              <a
+                class="text-blue-600"
+                href="https://yjmtomoaki.booth.pm/items/7826525"
+                target="_blank"
+                >BOOTH</a
+              >でも絶賛通販中です! <br />
+              <a
+                class="text-blue-600 font-semibold"
+                href="https://yjmtomoaki.booth.pm/items/7826525"
+                target="_blank"
+                >お得な全巻セット</a
+              >もございますので, この機会に購入をご検討ください.
             </p>
             <ul class="space-y-1 max-w-md text-sm list-disc list-inside">
               <li>
@@ -104,7 +125,10 @@
                   >
                 </span>
               </li>
-              <li>頒布価格: <span class="font-semibold">2,000円</span></li>
+              <li>
+                頒布価格:
+                <span class="font-semibold">2,000円 (通販は2,200円)</span>
+              </li>
               <li>内容: <span class="font-semibold">A5 289ページ</span></li>
               <!--
               <li>
@@ -238,13 +262,13 @@
                   </span>
                   <span
                     v-if="item.size || item.pages"
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                    class="inline-block bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
                   >
                     {{ item.size }} {{ item.pages }}
                   </span>
                   <span
                     v-if="item.price"
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-bold text-gray-700 mr-2 mb-2"
+                    class="inline-block bg-gray-300 rounded-full px-3 py-1 text-sm font-bold text-gray-700 mr-2 mb-2"
                   >
                     {{ item.price }}
                   </span>
