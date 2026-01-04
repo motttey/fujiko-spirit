@@ -285,9 +285,9 @@
         </div>
       </div>
     </div>
-    <div id="footer" class="self-end space-y-4 mt-50 bg-gray-800 text-right">
+    <div id="footer" class="self-end space-y-2 mt-50 bg-gray-800 text-right">
       <p
-        class="mx-5 text-1xl inline-block align-bottom text-white font-semibold"
+        class="mx-5 text-md md:text-lg inline-block align-bottom text-white font-semibold"
       >
         © 2025 Tagosaku Mochiduki / ともあき・ザ・ビッグシティ
       </p>
@@ -366,7 +366,7 @@ const ogPath = "/img/fs3_hyoushi_landing.webp";
 const ogUrl = new URL(ogPath, site.url).toString();
 
 useSeoMeta({
-  title: "藤子不二雄オマージュマガジン フジコ・スピリット",
+  title: "Top",
   description:
     "ドラえもんや藤子不二雄作品に感化されたクリエイターによる一次創作合同「フジコ・スピリット」の紹介ページ",
   ogImage: ogUrl,
