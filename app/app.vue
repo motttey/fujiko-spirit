@@ -372,6 +372,6 @@ useSeoMeta({
   ogImage: ogUrl,
   twitterCard: "summary_large_image",
   twitterImage: ogUrl,
-  robots: "index,follow,max-image-preview:large"
+  robots: "index,follow,max-image-preview:large",
 });
 </script>
