@@ -242,11 +242,6 @@
                   >
                     {{ item.subdescription }}
                   </p>
-                  <!---
-                  <p class="text-gray-700 text-sm text-left">
-                    <a class="text-blue-600" :href="item.url" target=”_blank”>[詳細情報]</a>
-                  </p>
-                  -->
                   <p
                     v-if="item.onlineOrderUrl"
                     class="text-gray-700 text-sm text-left"
@@ -287,13 +282,12 @@
     </div>
     <div id="footer" class="self-end space-y-2 mt-50 bg-gray-800 text-right">
       <p
-        class="mx-5 text-md md:text-lg inline-block align-bottom text-white font-semibold"
+        class="mx-5 md:text-lg inline-block align-bottom text-white font-semibold"
       >
         © 2025 Tagosaku Mochiduki / ともあき・ザ・ビッグシティ
       </p>
     </div>
   </div>
-  >
 </template>
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
