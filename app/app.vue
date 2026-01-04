@@ -53,6 +53,7 @@
           >
             <img
               class="cover-img w-full h-full object-center object-cover"
+              fetchPriority="high"
               loading="lazy"
               src="~/assets/img/fs3_hyoushi_landing.webp"
               alt="FS3号 表紙画像"
@@ -213,7 +214,7 @@
                 v-for="(item, index) in FS_BACK_NUMBER"
                 :key="index"
                 class="relative max-w-sm my-6 mx-5 rounded overflow-hidden shadow-lg"
-                :class="item.soldout ? 'bg-gray-200' : 'bg-white'"
+                :class="item.soldout ? 'bg-gray-100' : 'bg-white'"
               >
                 <div
                   v-if="item.soldout"

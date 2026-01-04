@@ -24,6 +24,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "ja",
       },
+      charset: 'utf-8',
       title: "藤子不二雄オマージュマガジン フジコ・スピリット",
       meta: [
         { charset: "utf-8" },
