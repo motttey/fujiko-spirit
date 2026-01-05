@@ -15,6 +15,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
+        { rel: "icon", type: "image/png", href: "/favicon.png" },
         {
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100;200;300;400;500;600;700;800;900&display=swap",
@@ -23,11 +24,9 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "ja",
       },
-      charset: 'utf-8',
       title: "藤子不二雄オマージュマガジン フジコ・スピリット",
       meta: [
         { charset: "utf-8" },
-        { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
           name: "copyright",
           content: "Tomoaki the Big City / Tagosaku Mochiduki",
@@ -53,7 +52,7 @@ export default defineNuxtConfig({
           property: "og:title",
           content: "藤子不二雄オマージュマガジン フジコ・スピリット",
         },
-        { key: "og:type", property: "og:type", content: "article" },
+        { key: "og:type", property: "og:type", content: "website" },
         {
           key: "og:description",
           property: "og:description",
@@ -70,10 +69,10 @@ export default defineNuxtConfig({
           name: "viewport",
           content: "width=device-width, initial-scale=1",
         },
-        { key: "author", property: "author", content: "望月田吾作" },
+        { key: "author", name: "author", content: "望月田吾作" },
         {
           key: "keywords",
-          property: "keywords",
+          name: "keywords",
           content:
             "同人誌,一次創作,ドラえもん,藤子不二雄,藤子・F・不二雄,藤子不二雄A,コミケ,矢島ともあき,望月田吾作,フジコ・スピリット,フジコスピリット",
         },
