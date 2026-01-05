@@ -54,7 +54,6 @@
             <img
               class="cover-img w-full h-full object-center object-cover"
               fetchPriority="high"
-              loading="lazy"
               src="~/assets/img/fs3_hyoushi_landing.webp"
               alt="FS3号 表紙画像"
             />
@@ -89,6 +88,7 @@
                 ― 主催 ともあき・ザ・ビッグシティ (<a
                   class="text-blue-600"
                   href="https://twitter.com/yjmtomoaki"
+                  fetchPriority="high"
                   target="_blank"
                   >@yjmtomoaki</a
                 >)
@@ -228,6 +228,7 @@
                     :src="getImageUrl(item.src)"
                     :alt="item.name"
                     loading="lazy"
+                    decoding="async"
                   />
                 </a>
                 <div class="mx-5 mt-5">
