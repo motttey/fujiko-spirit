@@ -191,8 +191,8 @@
                   'text-sm md:text-md font-semibold',
                   index % 2 === 0 ? 'text-gray-900' : 'text-gray-100',
                   [0, 1].includes((index - 1) % 4)
-                    ? 'md:text-gray-700'
-                    : 'md:text-gray-300',
+                    ? 'md:text-gray-800'
+                    : 'md:text-gray-200',
                 ]"
                 >{{ item.author }}</span
               >
