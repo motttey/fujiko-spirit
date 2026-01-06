@@ -14,13 +14,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      link: [
-        { rel: "icon", type: "image/png", href: "/favicon.png" },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100;200;300;400;500;600;700;800;900&display=swap",
-        },
-      ],
+      link: [{ rel: "icon", type: "image/png", href: "/favicon.ico" }],
       htmlAttrs: {
         lang: "ja",
       },
@@ -86,6 +80,17 @@ export default defineNuxtConfig({
     },
   },
 
+  fonts: {
+    families: [
+      {
+        name: "M PLUS 2",
+        provider: "google",
+        weights: [400, 600, 700],
+        subsets: ["japanese"],
+      },
+    ],
+  },
+
   site: {
     url: DEPLOYMENT_URL,
     name: "藤子不二雄オマージュマガジン フジコ・スピリット",
@@ -102,6 +107,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    "@nuxt/fonts",
     "@nuxt/eslint",
     "@nuxtjs/seo",
     "nuxt-link-checker",

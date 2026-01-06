@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+body {
+  font-family:
+    "M PLUS 2",
+    system-ui,
+    -apple-system,
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
+}

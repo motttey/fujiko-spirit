@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxt/eslint": "1.12.1",
+    "@nuxt/fonts": "^0.12.1",
     "@nuxtjs/seo": "^3.3.0",
     "@nuxtjs/sitemap": "7.5.0",
     "@tailwindcss/vite": "^4.1.18",
