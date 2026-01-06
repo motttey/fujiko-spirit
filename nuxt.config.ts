@@ -81,14 +81,12 @@ export default defineNuxtConfig({
   },
 
   fonts: {
-    families: [
-      {
-        name: "M PLUS 2",
-        provider: "google",
-        weights: [400, 600, 700],
-        subsets: ["japanese"],
-      },
-    ],
+    defaults: {
+      weights: [400, 600, 700],
+      styles: ["normal"],
+      subsets: ["japanese"],
+    },
+    families: [{ name: "M PLUS 2", provider: "google" }],
   },
 
   site: {
