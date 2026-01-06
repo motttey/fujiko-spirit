@@ -38,7 +38,7 @@
           target="_blank"
           href="https://yjmtomoaki.booth.pm/items/7826525"
           >[ともあき・ザ・ビッグシティのBOOTH]</a
-        >より購入いただけます. <br />
+        >より購入いただけます. <br >
       </p>
     </div>
     <div
@@ -56,7 +56,7 @@
               fetchPriority="high"
               src="~/assets/img/fs3_hyoushi_landing.webp"
               alt="FS3号 表紙画像"
-            />
+            >
           </div>
           <div
             class="p-6 mx-8 my-4 items-center align-middle bg-contain bg-no-repeat max-w-none"
@@ -75,14 +75,14 @@
             </p>
             <blockquote class="text-md text-gray-900 dark:text-white my-4">
               <p class="text-justify text-sm max-w-lg">
-                ドラえもん、オバQ、怪物くんなど数多の名作漫画を生み出した藤子不二雄先生。そんな藤子先生の作品に感化されたファンによる、オリジナル・一次創作合同誌です。<br />
-                <br />
+                ドラえもん、オバQ、怪物くんなど数多の名作漫画を生み出した藤子不二雄先生。そんな藤子先生の作品に感化されたファンによる、オリジナル・一次創作合同誌です。<br >
+                <br >
                 第三弾のテーマは<span class="font-bold">「殻を破れ！」</span>
-                <br />
+                <br >
                 漫画、イラスト、小説、絵画など。一次創作であればなんでもあり！なんと38名のクリエイターが集結！
-                <br />
-                ページは<span class="font-bold">驚異の289ページ！</span><br />
-                読み応え抜群な不思議な合同誌です！<br />
+                <br >
+                ページは<span class="font-bold">驚異の289ページ！</span><br >
+                読み応え抜群な不思議な合同誌です！<br >
               </p>
               <p class="text-right mt-4 text-md font-bold max-w-lg">
                 ― 主催 ともあき・ザ・ビッグシティ (<a
@@ -101,7 +101,7 @@
                 class="my-4 max-w-md w-full object-full"
                 src="~/assets/img/fs3_hyoushi.webp"
                 alt="FS3号の表紙/裏表紙"
-              />
+              >
             </div>
             <h3 class="mt-8 mb-4 text-l md:text-xl font-bold">詳細情報</h3>
             <p class="my-4 text-md font-semibold md:text-l">
@@ -111,7 +111,7 @@
                 href="https://yjmtomoaki.booth.pm/items/7826525"
                 target="_blank"
                 >BOOTH</a
-              >でも絶賛通販中です! <br />
+              >でも絶賛通販中です! <br >
               <a
                 class="text-blue-600 font-semibold"
                 href="https://yjmtomoaki.booth.pm/items/7826525"
@@ -229,7 +229,7 @@
                     :alt="item.name"
                     loading="lazy"
                     decoding="async"
-                  />
+                  >
                 </a>
                 <div class="mx-5 mt-5">
                   <div class="font-bold text-lg mb-2 text-left">
