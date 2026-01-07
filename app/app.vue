@@ -362,7 +362,7 @@ const ogPath = "/img/fs3_hyoushi_landing.webp";
 const ogUrl = new URL(ogPath, site.url).toString();
 
 useSeoMeta({
-  title: "フジコ・スピリット紹介ページ",
+  title: "フジコ・スピリット公式",
   description:
     "ドラえもんや藤子不二雄作品に感化されたクリエイターによる一次創作合同「フジコ・スピリット」の紹介ページ",
   ogImage: ogUrl,
