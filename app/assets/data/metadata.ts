@@ -1,4 +1,6 @@
-export const FS_BACK_NUMBER = [
+import type { FujikoSpiritAuthor, FujikoSpiritIssue } from "../types/metadata";
+
+export const FS_BACK_NUMBER: Array<FujikoSpiritIssue> = [
   {
     id: 1,
     name: "フジコ・スピリット第2号",
@@ -43,7 +45,7 @@ export const FS_BACK_NUMBER = [
   },
 ];
 
-export const FS3_AUTHOR_LIST = [
+export const FS3_AUTHOR_LIST: Array<FujikoSpiritAuthor> = [
   {
     author: "ありソラ",
     title: "ジツゲンの芽",
