@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   css: ["./app/assets/css/main.css"],
 
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss() as never],
   },
 
   app: {
@@ -80,13 +80,11 @@ export default defineNuxtConfig({
     },
   },
 
-  fonts: {
-    defaults: {
-      weights: [400, 600, 700],
-      styles: ["normal"],
-      subsets: ["japanese"],
-    },
-    families: [{ name: "M PLUS 2", provider: "google" }],
+  googleFonts: {
+    prefetch: true,
+    families: {
+      'M PLUS 2': [400, 600, 700],
+    }
   },
 
   site: {
@@ -105,11 +103,11 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    "@nuxt/fonts",
     "@nuxt/eslint",
     "@nuxtjs/seo",
     "nuxt-link-checker",
     "nuxt-gtag",
     "@nuxtjs/sitemap",
+    "@nuxtjs/google-fonts",
   ],
 });
