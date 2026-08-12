@@ -6,8 +6,7 @@ const DEPLOYMENT_URL = "https://fujiko-spirit.pages.dev/";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  css: ["./app/assets/css/main.css"],
-
+  css: ["~/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss() as never],
   },
