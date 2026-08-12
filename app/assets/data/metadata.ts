@@ -3,6 +3,20 @@ import type { FujikoSpiritAuthor, FujikoSpiritIssue } from "../types/metadata";
 export const FS_BACK_NUMBER: Array<FujikoSpiritIssue> = [
   {
     id: 1,
+    name: "フジコ・スピリット第3号",
+    description: "テーマ「殻を破れ！」",
+    subdescription: "コミックマーケット107頒布",
+    src: "fs3_hyoushi",
+    url: "https://yjmtomoaki.booth.pm/items/7826525",
+    new: false,
+    soldout: false,
+    size: "A5",
+    pages: "289ページ",
+    price: "2,000円",
+    onlineOrderUrl: "https://yjmtomoaki.booth.pm/items/7826525",
+  },
+  {
+    id: 2,
     name: "フジコ・スピリット第2号",
     description: "テーマ「インターネット」",
     subdescription: "サンクリ2025Winter頒布",
@@ -16,7 +30,7 @@ export const FS_BACK_NUMBER: Array<FujikoSpiritIssue> = [
     onlineOrderUrl: "https://yjmtomoaki.booth.pm/items/6624230",
   },
   {
-    id: 2,
+    id: 3,
     name: "フジコ・スピリット第1号",
     description: "テーマ「すこし・ふしぎ」",
     subdescription: "コミックマーケット103頒布",
@@ -30,7 +44,7 @@ export const FS_BACK_NUMBER: Array<FujikoSpiritIssue> = [
     onlineOrderUrl: "https://yjmtomoaki.booth.pm/items/5330491",
   },
   {
-    id: 3,
+    id: 4,
     name: "フジコ・スピリット第0号",
     description: "パイロット版",
     subdescription: "コミックマーケット101頒布",
