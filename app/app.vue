@@ -31,14 +31,14 @@
       <p class="font-bold">カンヅメカンからのお知らせ</p>
       <p class="text-sm">
         <span class="font-bold"
-          >フジコ・スピリットの第3号(最新号)を通信販売開始</span
+          >フジコ・スピリットの新企画「フジコ・リミテッド」始動しました!!</span
         >しました!
         <a
           class="text-blue-600 font-semibold"
           target="_blank"
-          href="https://yjmtomoaki.booth.pm/items/7826525"
-          >[ともあき・ザ・ビッグシティのBOOTH]</a
-        >より購入いただけます. <br />
+          href="https://x.com/fujiko_spirit/status/2083754116539629824"
+          >C108 (夏コミ)</a
+        >で頒布予定です! <br>
       </p>
     </div>
     <div
