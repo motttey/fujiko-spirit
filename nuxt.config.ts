@@ -82,8 +82,8 @@ export default defineNuxtConfig({
   googleFonts: {
     prefetch: true,
     families: {
-      'M PLUS 2': [400, 600, 700],
-    }
+      "M PLUS 2": [400, 600, 700],
+    },
   },
 
   site: {

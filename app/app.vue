@@ -38,7 +38,7 @@
           target="_blank"
           href="https://x.com/fujiko_spirit/status/2083754116539629824"
           >C108 (夏コミ)</a
-        >で頒布予定です! <br>
+        >で頒布予定です! <br />
       </p>
     </div>
     <div
