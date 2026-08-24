@@ -30,15 +30,15 @@
     >
       <p class="font-bold">カンヅメカンからのお知らせ</p>
       <p class="text-sm">
-        <span class="font-bold"
-          >フジコ・スピリットの新企画「フジコ・リミテッド」始動しました!!</span
-        >しました!
+        <span class="font-bold">
+          フジコ・スピリットの新企画「フジコ・リミテッド」始動しました!
+        </span>
         <a
           class="text-blue-600 font-semibold"
           target="_blank"
-          href="https://x.com/fujiko_spirit/status/2083754116539629824"
-          >C108 (夏コミ)</a
-        >で頒布予定です! <br />
+          href="https://yjmtomoaki.booth.pm/items/8728994"
+          >[BOOTH]</a
+        >で購入可能です!! <br />
       </p>
     </div>
     <div
